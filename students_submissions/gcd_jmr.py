@@ -1,4 +1,12 @@
 def gcd(a: int, b: int) -> int:
+    if a == 0 and b == 0:
+        print("Error GCD is undefined")
+        return None
+    a, b = abs(a), abs(b)
+    # Base 
+    if b == 0:
+        return a
+    return gcd(b, a % b)
 
     return a if a < b else b
 
